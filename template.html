@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 每日简报</title>
+<style>
+  :root {
+    --bg: #f8f9fa; --card: #ffffff; --text: #1a1a2e;
+    --accent: #4361ee; --accent2: #3a0ca3; --border: #e2e8f0;
+    --tag-bg: #eef2ff; --tag-text: #4361ee;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+      "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg); color: var(--text);
+    line-height: 1.7; max-width: 780px;
+    margin: 0 auto; padding: 24px 16px 60px;
+  }
+  header { text-align: center; margin-bottom: 32px; }
+  header h1 { font-size: 1.6rem; font-weight: 700; color: var(--accent2); }
+  header .date { font-size: 0.95rem; color: #64748b; margin-top: 4px; }
+  .summary {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: #fff; padding: 18px 22px; border-radius: 12px;
+    font-size: 1.05rem; line-height: 1.8; margin-bottom: 28px;
+  }
+  nav.toc {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin-bottom: 28px; justify-content: center;
+  }
+  nav.toc a {
+    display: inline-block; padding: 6px 14px;
+    background: var(--tag-bg); color: var(--tag-text);
+    border-radius: 20px; text-decoration: none; font-size: 0.85rem;
+    font-weight: 500; transition: all .2s;
+  }
+  nav.toc a:hover { background: var(--accent); color: #fff; }
+  section { margin-bottom: 36px; }
+  section h2 {
+    font-size: 1.25rem; font-weight: 700; margin-bottom: 16px;
+    padding-bottom: 8px; border-bottom: 2px solid var(--accent);
+    color: var(--accent2);
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 16px 20px; margin-bottom: 14px;
+    transition: box-shadow .2s;
+  }
+  .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.07); }
+  .card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 6px; }
+  .card p { font-size: 0.93rem; color: #374151; }
+  .card .meta {
+    font-size: 0.8rem; color: #94a3b8; margin-top: 8px;
+    display: flex; gap: 12px; flex-wrap: wrap;
+  }
+  .card .meta a { color: var(--accent); text-decoration: none; }
+  .card .meta a:hover { text-decoration: underline; }
+  .data-item {
+    padding: 10px 0; border-bottom: 1px dashed var(--border);
+    font-size: 0.93rem;
+  }
+  .data-item:last-child { border-bottom: none; }
+  .data-item strong { color: var(--accent); }
+  table {
+    width: 100%; border-collapse: collapse;
+    background: var(--card); border-radius: 10px; overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  th, td {
+    padding: 10px 16px; text-align: left;
+    font-size: 0.9rem; border-bottom: 1px solid var(--border);
+  }
+  th { background: var(--tag-bg); font-weight: 600; color: var(--accent2); }
+  .insight {
+    background: var(--card); border-left: 4px solid var(--accent);
+    padding: 16px 20px; border-radius: 0 10px 10px 0;
+    margin-bottom: 14px; font-size: 0.93rem;
+  }
+  footer {
+    text-align: center; margin-top: 40px;
+    font-size: 0.8rem; color: #94a3b8;
+  }
+  @media (max-width: 480px) {
+    body { padding: 16px 12px 40px; }
+    header h1 { font-size: 1.35rem; }
+    .summary { padding: 14px 16px; font-size: 0.97rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>AI 每日简报</h1>
+  <div class="date">{{DATE}}</div>
+</header>
+
+<div class="summary">{{SUMMARY}}</div>
+
+<nav class="toc">
+  <a href="#trends">动态与趋势</a>
+  <a href="#highlights">今日看点</a>
+  <a href="#events">大事件</a>
+  <a href="#apps">应用前线</a>
+  <a href="#data">数据速递</a>
+  <a href="#papers">ArXiv 精选</a>
+  <a href="#github">GitHub 趋势</a>
+  <a href="#insights">今日洞察</a>
+</nav>
+
+<section id="trends">
+  <h2>🌊 AI 动态与趋势</h2>
+  {{TRENDS}}
+</section>
+
+<section id="highlights">
+  <h2>📰 AI 今日看点</h2>
+  {{HIGHLIGHTS}}
+</section>
+
+<section id="events">
+  <h2>🔥 AI 大事件</h2>
+  {{EVENTS}}
+</section>
+
+<section id="apps">
+  <h2>🛠️ AI 应用前线</h2>
+  {{APPS}}
+</section>
+
+<section id="data">
+  <h2>📊 数据速递</h2>
+  {{DATA}}
+</section>
+
+<section id="overview">
+  <h2>📊 今日概览</h2>
+  {{OVERVIEW_TABLE}}
+</section>
+
+<section id="papers">
+  <h2>🔬 ArXiv 今日精选论文</h2>
+  {{PAPERS}}
+</section>
+
+<section id="github">
+  <h2>🚀 GitHub AI 趋势日榜</h2>
+  {{GITHUB}}
+</section>
+
+<section id="insights">
+  <h2>💡 今日洞察</h2>
+  {{INSIGHTS}}
+</section>
+
+<footer>
+  由 QoderWork 自动生成 · {{DATE}}
+</footer>
+
+</body>
+</html>
