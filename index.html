@@ -3,487 +3,499 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>AI 每日简报 | 2026年6月28日</title>
+<title>AI每日简报 | 2026年6月30日</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:#f0f2f5;color:#333;line-height:1.7;font-size:16px;-webkit-text-size-adjust:100%}
-a{color:#4361ee;text-decoration:none;word-break:break-all}
-a:hover{text-decoration:underline}
-.container{max-width:800px;margin:0 auto;padding:12px}
-.header{background:linear-gradient(135deg,#4361ee 0%,#3a0ca3 100%);color:#fff;border-radius:16px;padding:28px 20px;margin-bottom:16px;text-align:center}
-.header h1{font-size:24px;font-weight:700;margin-bottom:6px}
-.header .date{font-size:14px;opacity:.85;margin-bottom:12px}
-.header .summary{font-size:15px;line-height:1.6;background:rgba(255,255,255,.15);border-radius:10px;padding:14px;margin-top:10px;text-align:left}
-.nav{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:14px}
-.nav a{display:inline-block;background:rgba(255,255,255,.2);color:#fff;padding:5px 12px;border-radius:20px;font-size:12px;transition:background .2s}
-.nav a:hover{background:rgba(255,255,255,.35);text-decoration:none}
-.section{background:#fff;border-radius:14px;padding:20px;margin-bottom:14px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
-.section-title{font-size:20px;font-weight:700;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #4361ee;display:flex;align-items:center;gap:8px}
-.card{background:#f8f9ff;border-radius:10px;padding:16px;margin-bottom:12px;border-left:4px solid #4361ee;transition:box-shadow .2s}
-.card:hover{box-shadow:0 4px 16px rgba(67,97,238,.12)}
-.card:last-child{margin-bottom:0}
-.card h3{font-size:16px;font-weight:600;color:#1a1a2e;margin-bottom:8px}
-.card p{font-size:14px;color:#555;line-height:1.7}
-.card .meta{font-size:12px;color:#888;margin-top:8px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.card .meta a{color:#4361ee;font-size:12px}
-.card-accent{border-left-color:#7209b7}
-.card-warm{border-left-color:#f72585}
-.card-green{border-left-color:#06d6a0}
-.card-orange{border-left-color:#fb8500}
-.overview-table{width:100%;border-collapse:collapse;font-size:14px}
-.overview-table th,.overview-table td{padding:10px 12px;text-align:center;border-bottom:1px solid #eee}
-.overview-table th{background:linear-gradient(135deg,#4361ee,#3a0ca3);color:#fff;font-weight:600}
-.overview-table tr:nth-child(even){background:#f8f9ff}
-.data-grid{display:grid;grid-template-columns:1fr;gap:10px}
-.data-item{background:#f8f9ff;border-radius:10px;padding:14px;border-left:4px solid #7209b7}
-.data-item .num{font-size:22px;font-weight:700;color:#4361ee}
-.data-item .desc{font-size:13px;color:#555;margin-top:4px}
-.data-item .src{font-size:11px;color:#999;margin-top:4px}
-.insight-card{background:linear-gradient(135deg,#f8f9ff,#ede7f6);border-radius:12px;padding:18px;margin-bottom:12px;border:1px solid rgba(67,97,238,.15)}
-.insight-card h3{color:#3a0ca3;font-size:16px;margin-bottom:8px}
-.insight-card p{font-size:14px;color:#444;line-height:1.8}
-.gh-table{width:100%;border-collapse:collapse;font-size:13px}
-.gh-table th{background:#4361ee;color:#fff;padding:8px 6px;text-align:left;font-size:12px}
-.gh-table td{padding:8px 6px;border-bottom:1px solid #eee;vertical-align:top}
-.gh-table tr:nth-child(even){background:#f8f9ff}
-.gh-stars{color:#f59e0b;font-weight:600;white-space:nowrap}
-.gh-lang{background:#e8eaf6;color:#4361ee;padding:2px 8px;border-radius:10px;font-size:11px;white-space:nowrap}
-.paper-card{background:#faf8ff;border-radius:10px;padding:16px;margin-bottom:12px;border-left:4px solid #7209b7}
-.paper-card .paper-cat{font-size:11px;color:#7209b7;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
-.paper-card h3{font-size:15px;color:#1a1a2e;margin-bottom:4px}
-.paper-card .authors{font-size:12px;color:#888;margin-bottom:8px;font-style:italic}
-.paper-card .abstract{font-size:13px;color:#555;line-height:1.8}
-.footer{text-align:center;padding:20px;color:#999;font-size:12px}
-.badge{display:inline-block;background:#4361ee;color:#fff;padding:2px 8px;border-radius:10px;font-size:11px;margin-left:4px}
-@media(min-width:600px){.data-grid{grid-template-columns:1fr 1fr}.container{padding:20px}.header{padding:36px 28px}.header h1{font-size:28px}}
-@media(min-width:768px){.gh-table{font-size:14px}}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:#f0f2f5;color:#1a1a2e;line-height:1.7;padding:0}
+.header{background:linear-gradient(135deg,#4361ee 0%,#3a0ca3 100%);color:#fff;padding:28px 20px 20px;text-align:center;position:relative}
+.header h1{font-size:22px;font-weight:700;margin-bottom:6px;letter-spacing:1px}
+.header .date{font-size:14px;opacity:0.85;margin-bottom:12px}
+.header .summary{font-size:14px;line-height:1.6;background:rgba(255,255,255,0.15);border-radius:10px;padding:12px 16px;text-align:left;backdrop-filter:blur(5px)}
+.nav{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;padding:12px 16px;background:#fff;border-bottom:1px solid #e8e8e8;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.nav a{font-size:12px;color:#4361ee;text-decoration:none;padding:4px 10px;border-radius:15px;border:1px solid #4361ee;white-space:nowrap;transition:all 0.2s}
+.nav a:hover,.nav a:active{background:#4361ee;color:#fff}
+.container{max-width:720px;margin:0 auto;padding:16px}
+.section{margin-bottom:20px}
+.section-title{font-size:18px;font-weight:700;color:#3a0ca3;padding:14px 16px;margin-bottom:10px;border-left:4px solid #4361ee;background:#fff;border-radius:0 10px 10px 0;box-shadow:0 1px 4px rgba(0,0,0,0.05)}
+.card{background:#fff;border-radius:12px;padding:16px;margin-bottom:12px;box-shadow:0 1px 6px rgba(0,0,0,0.06);transition:transform 0.15s}
+.card:active{transform:scale(0.99)}
+.card h3{font-size:15px;color:#1a1a2e;margin-bottom:8px;font-weight:600;line-height:1.5}
+.card h3 .num{display:inline-block;background:linear-gradient(135deg,#4361ee,#3a0ca3);color:#fff;width:22px;height:22px;border-radius:50%;text-align:center;line-height:22px;font-size:11px;margin-right:6px;vertical-align:middle}
+.card p{font-size:13.5px;color:#444;line-height:1.7;margin-bottom:8px}
+.card .meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#888;flex-wrap:wrap;gap:4px}
+.card .meta a{color:#4361ee;text-decoration:none;font-size:12px}
+.card .meta a:hover{text-decoration:underline}
+.trend-card{background:#fff;border-radius:12px;padding:16px;margin-bottom:12px;box-shadow:0 1px 6px rgba(0,0,0,0.06);border-left:3px solid #7209b7}
+.trend-card h3{font-size:15px;color:#7209b7;margin-bottom:8px;font-weight:600;line-height:1.5}
+.trend-card p{font-size:13.5px;color:#444;line-height:1.7;margin-bottom:8px}
+.trend-card .meta{display:flex;justify-content:space-between;font-size:12px;color:#888;flex-wrap:wrap;gap:4px}
+.trend-card .meta a{color:#7209b7;text-decoration:none}
+.data-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.data-item{background:#fff;border-radius:10px;padding:12px;box-shadow:0 1px 4px rgba(0,0,0,0.05);text-align:center}
+.data-item .value{font-size:20px;font-weight:700;color:#4361ee;display:block}
+.data-item .label{font-size:12px;color:#666;margin-top:4px;display:block;line-height:1.4}
+.data-item .source{font-size:10px;color:#999;margin-top:2px;display:block}
+.gh-item{display:flex;align-items:center;padding:10px 14px;background:#fff;border-radius:10px;margin-bottom:8px;box-shadow:0 1px 4px rgba(0,0,0,0.05);gap:10px}
+.gh-item .rank{background:linear-gradient(135deg,#4361ee,#3a0ca3);color:#fff;width:24px;height:24px;border-radius:50%;text-align:center;line-height:24px;font-size:11px;flex-shrink:0}
+.gh-item .info{flex:1;min-width:0}
+.gh-item .info .name{font-size:13px;font-weight:600;color:#1a1a2e;word-break:break-all}
+.gh-item .info .desc{font-size:12px;color:#666;margin-top:2px;line-height:1.4}
+.gh-item .stars{font-size:11px;color:#4361ee;font-weight:600;white-space:nowrap;flex-shrink:0}
+.gh-item .info a{color:#4361ee;text-decoration:none;font-size:11px}
+.insight-card{background:linear-gradient(135deg,#f8f9ff,#eef1ff);border-radius:12px;padding:16px;margin-bottom:12px;border:1px solid #d4daff}
+.insight-card h3{font-size:15px;color:#3a0ca3;margin-bottom:8px;font-weight:600}
+.insight-card p{font-size:13.5px;color:#444;line-height:1.7}
+.overview-table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.05)}
+.overview-table th,.overview-table td{padding:10px 14px;text-align:center;font-size:13px;border-bottom:1px solid #f0f0f0}
+.overview-table th{background:#4361ee;color:#fff;font-weight:600}
+.overview-table td{color:#444}
+.footer{text-align:center;padding:20px;color:#999;font-size:12px;line-height:1.6}
+.footer a{color:#4361ee;text-decoration:none}
+.paper-card{background:#fff;border-radius:12px;padding:16px;margin-bottom:12px;box-shadow:0 1px 6px rgba(0,0,0,0.06);border-left:3px solid #06d6a0}
+.paper-card h3{font-size:14px;color:#06855a;margin-bottom:4px;font-weight:600}
+.paper-card .paper-title{font-size:14px;color:#1a1a2e;font-weight:600;margin-bottom:8px;line-height:1.5}
+.paper-card p{font-size:13px;color:#444;line-height:1.7;margin-bottom:8px}
+.paper-card .meta{font-size:12px;color:#888}
+.paper-card .meta a{color:#06855a;text-decoration:none}
+@media(max-width:480px){.data-grid{grid-template-columns:1fr}.container{padding:10px}.header{padding:20px 14px 16px}.header h1{font-size:19px}}
 </style>
 </head>
 <body>
-<div class="container">
 
-<!-- Header -->
 <div class="header">
-<h1>AI 每日简报</h1>
-<div class="date">2026年6月28日 星期六</div>
+<h1>🤖 AI 每日简报</h1>
+<div class="date">2026年6月30日 · 周一</div>
 <div class="summary">
-<strong>今日核心：</strong>OpenAI首款自研芯片Jalapeño亮相、Anthropic指控阿里蒸馏Claude引爆知识产权战、谷歌DeepMind核心人才加速流向Anthropic、SK海力士290亿美元赴美上市——AI行业正进入芯片自主化、人才重组和地缘博弈的新阶段。
+<strong>今日核心：</strong>全球AI算力荒持续加剧——谷歌限制Meta调用Gemini、OpenAI发布首款自研推理芯片Jalapeño、GPT-5.6即将登场，AI竞赛正式进入"算力+芯片+生态"的立体战争时代。
 </div>
+</div>
+
 <div class="nav">
 <a href="#trends">🌊 动态趋势</a>
 <a href="#news">📰 今日看点</a>
-<a href="#events">🔥 大事件</a>
+<a href="#big">🔥 大事件</a>
 <a href="#apps">🛠️ 应用前线</a>
 <a href="#data">📊 数据速递</a>
-<a href="#papers">🔬 ArXiv论文</a>
-<a href="#github">🚀 GitHub趋势</a>
+<a href="#overview">📊 概览</a>
+<a href="#papers">🔬 论文</a>
+<a href="#github">🚀 GitHub</a>
 <a href="#insights">💡 洞察</a>
 </div>
-</div>
 
-<!-- 动态与趋势 -->
+<div class="container">
+
+<!-- 🌊 AI 动态与趋势 -->
 <div class="section" id="trends">
 <div class="section-title">🌊 AI 动态与趋势</div>
 
-<div class="card">
-<h3>1. AI芯片战争格局重塑：从英伟达一家独大到三足鼎立</h3>
-<p>AI基础设施的"心脏"正在经历一次权力重构。OpenAI联合博通在仅9个月内完成了Jalapeño推理芯片的设计到量产（台积电3nm工艺），标志着前沿AI实验室开始摆脱对英伟达的绝对依赖。与此同时，高通在投资者日上发布了250核5GHz的Dragonfly C1000数据中心CPU并拿下Meta大单，将2029年非手机业务营收目标上调至400亿美元。AI算力供应正从"英伟达垄断"走向"GPU+定制芯片+RISC-V"三足鼎立的新格局。</p>
-<div class="meta">📅 2026-06-25 | <a href="https://www.toutiao.com/a7655694152781120000/">Jalapeño芯片</a> | <a href="https://36kr.com/p/3868422554916100">高通Dragonfly</a></div>
+<div class="trend-card">
+<h3>1. 全球AI算力荒进入白热化，巨头间资源争夺公开化</h3>
+<p>谷歌因自身算力告急限制Meta调用Gemini，月租9.2亿美元向马斯克采购算力的传闻更凸显供给端紧张。HBM芯片短缺致三大巨头产能缺口超50%，AI基础设施资本开支全年预计达7250亿美元。过去"卖API给对手"的模式正在瓦解，因为连供给方自己都吃不饱。</p>
+<div class="meta"><span>📅 2026-06-29</span><a href="https://www.toutiao.com/article/7656340764280078848/" target="_blank">🔗 原文</a></div>
 </div>
 
-<div class="card card-accent">
-<h3>2. 中美AI知识产权冷战升级：蒸馏争议背后的地缘博弈</h3>
-<p>Anthropic指控阿里巴巴通过虚假账户发起2880万次"蒸馏攻击"提取Claude能力，这不仅仅是一起商业纠纷。从技术层面看，这揭示了大模型时代最核心的知识产权困境：模型的"知识"是否可以被API调用所提取？从地缘政治看，Anthropic将此定性为"对我们地缘政治竞争对手的大额补贴"。中美AI领域的信任赤字正在从技术竞争外溢到法律和制度层面。</p>
-<div class="meta">📅 2026-06-24 | <a href="https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html">CNBC报道</a> | <a href="https://www.sohu.com/a/1041339622_120638089">阿里起诉国防部</a></div>
+<div class="trend-card">
+<h3>2. AI编程市场93亿美元引爆军备竞赛，收购潮来袭</h3>
+<p>AI编码工具市场已达93亿美元，Anthropic以Claude Code领跑。SpaceX 600亿美元收购Cursor震动科技圈，前50名早期员工人均回报数千万美元。AI编程工具正从"开发者效率工具"升格为"企业级AI基础设施"，未来12个月还将迎来更多整合。</p>
+<div class="meta"><span>📅 2026-06-29</span><a href="https://finance.sina.cn/2026-06-29/detail-inifauhu6945146.d.html" target="_blank">🔗 原文</a></div>
 </div>
 
-<div class="card card-warm">
-<h3>3. AI人才大迁徙：谷歌"研究院困境"与Anthropic的人才虹吸</h3>
-<p>谷歌DeepMind正面临前所未有的核心人才流失。AlphaFold负责人、诺贝尔奖得主John Jumper领衔，至少4名核心人才转投Anthropic。根本原因是谷歌内部的算力资源争夺——稀缺GPU的分配政治正在将顶尖研究者推向能提供更充裕计算资源的竞争对手。Anthropic凭借9650亿美元估值和即将推进的IPO，已构建起对顶尖人才的强大吸引力。</p>
-<div class="meta">📅 2026-06-24 | <a href="https://www.pingwest.com/w/314874">AlphaFold转投Anthropic</a> | <a href="https://www.alphamatch.ai/blog/google-deepmind-ai-brain-drain-2026">人才流失分析</a></div>
+<div class="trend-card">
+<h3>3. "小模型逆袭"趋势加速：参数效率成新战场</h3>
+<p>微博VibeThinker-3B用30亿参数追平200倍参数大模型，Mila与康奈尔揭示"参数预算不变但性能大幅提升"的隐藏规律。企业级AI部署不再一味追求"越大越好"，转向"够精则优"，对中小公司和端侧设备是根本性利好。</p>
+<div class="meta"><span>📅 2026-06-29</span><a href="https://ai-bot.cn/vibethinker-3b/" target="_blank">🔗 原文</a></div>
 </div>
 
-<div class="card card-green">
-<h3>4. AI编程市场爆发：93亿美元赛道成兵家必争之地</h3>
-<p>AI编程工具市场已膨胀至93亿美元，成为2026年最炙手可热的AI应用赛道。Anthropic凭借Claude Code在企业编码领域一骑绝尘，年化收入超25亿美元。微软、谷歌、OpenAI纷纷加码对标。编程不再是AI的"附属能力"，而是核心商业价值的引擎。</p>
-<div class="meta">📅 2026-06 | <a href="https://www.buildfastwithai.com/blogs/ai-coding-tools">AI编程市场</a> | <a href="https://m.toutiao.com/article/7648662774075097615/">Claude Code收入</a></div>
+<div class="trend-card">
+<h3>4. 中国AI大模型"性价比出海"重塑全球定价体系</h3>
+<p>Coinbase替换为智谱GLM和Kimi后运营成本减半，DeepSeek V4-Pro永久降价，百度Unlimited OCR开源5天Star破万。中国开源模型正从"能用"变成"首选"，全球AI市场价格战已不可逆转。</p>
+<div class="meta"><span>📅 2026-06-29</span><a href="https://www.aitop100.cn/ai-daily-2026-06-29" target="_blank">🔗 原文</a></div>
 </div>
 
-<div class="card card-orange">
-<h3>5. 廉价AI时代终结：前沿模型定价的结构性转向</h3>
-<p>西方前沿模型的定价正在系统性上涨。"以客户习惯的价格运行前沿模型从来就不可持续"。与之形成对比的是，DeepSeek V4-Pro永久降价75%，以极低价格冲击企业市场。这种定价分化正在制造"AI双轨制"——西方走高端高价路线，中国模型以极致性价比抢占市场。</p>
-<div class="meta">📅 2026-06 | <a href="https://www.buildfastwithai.com/blogs/best-ai-models-june-2026">廉价AI终结</a> | <a href="http://field.10jqka.com.cn/20260525/c676943560.shtml">DeepSeek降价</a></div>
+<div class="trend-card">
+<h3>5. AI芯片自主化浪潮：OpenAI Jalapeño打响"去NVIDIA化"第一枪</h3>
+<p>OpenAI与Broadcom合作9个月完成首款自研推理芯片从设计到量产，推理成本降低50%。Broadcom正成为各大科技公司定制芯片核心伙伴，挑战NVIDIA推理侧垄断。未来AI公司竞争力将取决于"自研芯片+模型协同优化"的全栈能力。</p>
+<div class="meta"><span>📅 2026-06-24</span><a href="https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/" target="_blank">🔗 原文</a></div>
 </div>
 
-<div class="card">
-<h3>6. AI监管"合规元年"：欧盟、美国双线推进</h3>
-<p>全球AI监管正在同步收紧。欧盟AI法案高风险系统合规截止日期逼近（8月生效），违规企业面临最高营收7%罚款。科罗拉多州AI法案6月30日生效，成为全美首个州级AI反歧视法。Anthropic将于7月8日上线用户身份生物识别验证。AI行业正从"自律为主"进入"强监管时代"。</p>
-<div class="meta">📅 2026-06-26 | <a href="https://verifywise.ai/blog/state-of-ai-governance-regulations-united-states-2026">科罗拉多AI法案</a> | <a href="https://www.hklaw.com/en/insights/publications/2026/04/us-companies-face-eu-ai-acts-possible-august-2026-compliance-deadline">欧盟AI法案</a></div>
+<div class="trend-card">
+<h3>6. AI人才争夺战白热化：Google DeepMind遭"系统性挖空"</h3>
+<p>AlphaFold核心负责人John Jumper离开Google DeepMind加入Anthropic，AI编码主管也转投OpenAI。谷歌内部GPU资源分配的政治斗争被认为是人才流失核心原因——"对顶尖研究者来说，算力访问不是次要问题"。</p>
+<div class="meta"><span>📅 2026-06-24</span><a href="https://techcrunch.com/2026/06/24/ai-researchers-continue-to-leave-google-for-its-rivals/" target="_blank">🔗 原文</a></div>
 </div>
 
-<div class="card card-accent">
-<h3>7. 中国AI全球化叙事升级：达沃斯高频词与300+产品首发</h3>
-<p>中国AI产业的国际话语权正在快速提升。夏季达沃斯论坛上，"All in AI"和"中国方案"成为全场高频词。7月17日世界人工智能大会已确认超300款AI产品全球首发。四川天府新区也举办了AI产业生态发布会。中国正从AI的"追赶者"加速转向"规则制定参与者"。</p>
-<div class="meta">📅 2026-06-25 | <a href="https://m.10jqka.com.cn/20260625/c677717565.html">达沃斯AI中国方案</a> | <a href="https://news.cnr.cn/native/gd/20260617/t20260617_527665611.shtml">世界人工智能大会</a></div>
+<div class="trend-card">
+<h3>7. AI出口管制出现松动，中美博弈进入新阶段</h3>
+<p>美国AI出口管制出现微调迹象，部分高级模型可能恢复开放。同时Anthropic指控阿里巴巴使用2.5万虚假账号蒸馏Claude。中国方面，2026世界人工智能大会将于7月在上海举办，超300款AI产品全球首发。监管博弈与技术竞争正同步升级。</p>
+<div class="meta"><span>📅 2026-06-29</span><a href="https://finance.jrj.com.cn/2026/06/18112457511542.shtml" target="_blank">🔗 原文</a></div>
 </div>
 </div>
 
-<!-- 今日看点 -->
+<!-- 📰 AI 今日看点 -->
 <div class="section" id="news">
 <div class="section-title">📰 AI 今日看点</div>
 
 <div class="card">
-<h3>1. GPT-5.6箭在弦上：150万上下文+原生Agent能力</h3>
-<p>OpenAI最新旗舰模型GPT-5.6的发布窗口已近在眼前。据悉将配备150万token扩展上下文窗口和原生Agent能力，被视为与Anthropic Fable 5正面对决的关键一役。</p>
-<div class="meta">📅 2026-06-26 | <a href="https://m.toutiao.com/article/7654083588631102006/">GPT-5.6详情</a></div>
-</div>
-
-<div class="card card-accent">
-<h3>2. Gemini 3.5 Pro跳票至7月</h3>
-<p>谷歌将Gemini 3.5 Pro推迟至7月，主因是token效率问题和内部人事变动。预测市场上6月发布概率已降至约4.5%。</p>
-<div class="meta">📅 2026-06-25 | <a href="https://m.toutiao.com/article/7655541693210526242/">延期分析</a></div>
-</div>
-
-<div class="card card-green">
-<h3>3. 苹果WWDC发布第三代基础模型AFM 3</h3>
-<p>苹果在WWDC 2026上发布AFM 3系列基础模型，涵盖端侧和云端两套方案，采用前沿蒸馏技术，高管回应"套壳Gemini"质疑，强调完全自主研发。</p>
-<div class="meta">📅 2026-06-08 | <a href="https://cloud.tencent.com/developer/article/2685852">AFM 3详解</a></div>
-</div>
-
-<div class="card card-warm">
-<h3>4. Gemini实时翻译上线</h3>
-<p>谷歌在新设备上推出Gemini驱动的Live Translate，实现系统级语音到语音实时翻译，支持数十种语言。AI能力正从"应用层"下沉到"系统层"。</p>
-<div class="meta">📅 2026-06 | <a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-26-2026">详情</a></div>
+<h3><span class="num">1</span>Google Gemini向全美免费用户开放个性化AI生图</h3>
+<p>谷歌扩大Gemini图像生成能力，所有美国免费用户可利用个人数据生成个性化AI图像，系统从Google相册中提取特征信息定制生成。</p>
+<div class="meta"><span>📅 2026-06-30</span><a href="https://www.theverge.com/ai-artificial-intelligence/959246/gemini-now-lets-more-people-generate-personalized-ai-images" target="_blank">🔗 The Verge</a></div>
 </div>
 
 <div class="card">
-<h3>5. Anthropic 7月8日上线身份验证</h3>
-<p>为满足出口管制合规要求，Anthropic将通过Persona平台强制上线生物识别和政府ID核验。前沿AI实验室首次实施如此严格的用户身份管理。</p>
-<div class="meta">📅 2026-06-26 | <a href="https://unrot.co/blogs/today-top-10-ai-news-june-26-2026">详情</a></div>
-</div>
-
-<div class="card card-orange">
-<h3>6. Fable 5禁令持续第14天：零流量</h3>
-<p>Anthropic的Fable 5在出口管制禁令下已封锁14天。禁令前DeepSWE基准取得70分史上最高成绩，能首次尝试解决100个全新软件工程问题中的70个。</p>
-<div class="meta">📅 2026-06-26 | <a href="https://unrot.co/blogs/today-top-10-ai-news-june-26-2026">详情</a></div>
-</div>
-
-<div class="card card-accent">
-<h3>7. 智谱GLM-5.2开源：国产大模型代码能力逼近Claude</h3>
-<p>智谱正式开源GLM-5.2，支持100万token无损上下文，Code Arena排名位居全球前列。MIT协议完全免费商用，标志国产大模型进入"同级竞争"阶段。</p>
-<div class="meta">📅 2026-06-17 | <a href="https://www.ithome.com/tags/GLM5.2/">GLM-5.2</a></div>
-</div>
-
-<div class="card card-green">
-<h3>8. 斯坦福发布《2026年人工智能指数报告》</h3>
-<p>斯坦福年度AI指数报告全面梳理全球AI发展现状，覆盖模型性能、投资趋势、政策监管、人才分布等关键维度。</p>
-<div class="meta">📅 2026-04-16 | <a href="https://new.qq.com/rain/a/20260416A06CZT00">报告详情</a></div>
+<h3><span class="num">2</span>字节豆包悄悄内测社交功能，打通飞书账号</h3>
+<p>豆包灰度测试好友功能，可添加真实社交联系人并自动生成问候语，系统自动区分真人与AI智能体，未来计划连接抖音。官方称暂无社交计划，但与飞书有协同尝试。</p>
+<div class="meta"><span>📅 2026-06-29</span><a href="https://m.163.com/dy/article/L0JUQFRK053144S4.html" target="_blank">🔗 网易</a></div>
 </div>
 
 <div class="card">
-<h3>9. Mila与康奈尔发现语言模型"免费午餐"</h3>
-<p>联合研究揭示，不增加参数预算，通过特定架构和训练策略优化可获显著性能提升，对Scaling Law认知提出新挑战。</p>
-<div class="meta">📅 2026-06-25 | <a href="https://new.qq.com/rain/a/20260625A04FYX00">研究详情</a></div>
+<h3><span class="num">3</span>Meta禁止工程师使用Codex和Claude等外部AI编程工具</h3>
+<p>为保护知识产权，Meta正式限制工程师使用OpenAI Codex和Anthropic Claude。当AI工具可能"学习"你的代码时，使用竞品工具本身就是安全风险。</p>
+<div class="meta"><span>📅 2026-06-30</span><a href="https://www.aibase.com/news" target="_blank">🔗 AIBase</a></div>
 </div>
 
-<div class="card card-warm">
-<h3>10. CVPR 2026论文集开放访问</h3>
-<p>CVPR 2026论文集已开放访问，涵盖计算机视觉和模式识别最新突破，从3D重建到医学影像、自动驾驶全面进展。</p>
-<div class="meta">📅 2026-06 | <a href="https://openaccess.thecvf.com/CVPR2026?day=2026-06-07">论文集</a></div>
+<div class="card">
+<h3><span class="num">4</span>xAI发布Grok 4.5，承诺每月从头训练新基座</h3>
+<p>马斯克旗下xAI推出Grok 4.5，参数规模庞大，计划此后每月发布从头训练的全新基座模型（而非简单微调），研发节奏前所未有。</p>
+<div class="meta"><span>📅 2026-06-28</span><a href="https://www.aitop100.cn/infomation/details/34143.html" target="_blank">🔗 AITop100</a></div>
+</div>
+
+<div class="card">
+<h3><span class="num">5</span>OpenAI成立专项团队调查Codex配额异常</h3>
+<p>大量付费用户反馈Codex使用配额不明原因骤降，OpenAI成立专门团队调查，引发对"先低价吸引后限制使用"商业模式的质疑。</p>
+<div class="meta"><span>📅 2026-06-30</span><a href="https://www.aibase.com/news" target="_blank">🔗 AIBase</a></div>
+</div>
+
+<div class="card">
+<h3><span class="num">6</span>Google Gemini因需求暴涨实施使用配额</h3>
+<p>算力压力激增，Google开始对Gemini实施使用配额以确保公平访问。即便是模型提供商自己，也面临算力供给的硬约束。</p>
+<div class="meta"><span>📅 2026-06-30</span><a href="https://www.aibase.com/news" target="_blank">🔗 AIBase</a></div>
+</div>
+
+<div class="card">
+<h3><span class="num">7</span>韩国推出AI数据中心专属电价制度</h3>
+<p>韩国政府引入区域化专业电价体系，为AI数据中心和芯片制造提供稳定电力保障。全球变压器交货周期已延长至160周。</p>
+<div class="meta"><span>📅 2026-06-30</span><a href="https://m.163.com/dy/article/L0JLBC0O0511B8LM.html" target="_blank">🔗 网易</a></div>
+</div>
+
+<div class="card">
+<h3><span class="num">8</span>Amazon放弃发行OpenAI创始人传记电影</h3>
+<p>Amazon Studios决定不发行关于OpenAI创始人的传记电影，引发科技公司文化叙事控制权讨论。</p>
+<div class="meta"><span>📅 2026-06-30</span><a href="https://www.aibase.com/news" target="_blank">🔗 AIBase</a></div>
+</div>
+
+<div class="card">
+<h3><span class="num">9</span>Apple因AI加速攻击工具开发提前推送安全更新</h3>
+<p>苹果承认AI正加速恶意攻击工具开发，提前推送iOS和macOS紧急安全更新，防范AI驱动的新一代网络攻击。</p>
+<div class="meta"><span>📅 2026-06-30</span><a href="https://www.aibase.com/news" target="_blank">🔗 AIBase</a></div>
+</div>
+
+<div class="card">
+<h3><span class="num">10</span>夏季达沃斯热议AI，"中国方案"成高频词</h3>
+<p>夏季达沃斯论坛上，AI治理成核心议题，中国AI监管和产业推进方案被频繁提及，凸显中国在全球AI治理话语权的提升。</p>
+<div class="meta"><span>📅 2026-06-25</span><a href="https://www.taiwan.cn/xwzx/PoliticsNews/202606/t20260625_12772731.htm" target="_blank">🔗 原文</a></div>
 </div>
 </div>
 
-<!-- 大事件 -->
-<div class="section" id="events">
+<!-- 🔥 AI 大事件 -->
+<div class="section" id="big">
 <div class="section-title">🔥 AI 大事件</div>
 
-<div class="card card-warm">
-<h3>1. OpenAI联合博通发布首款定制AI芯片Jalapeño</h3>
-<p>OpenAI与博通合作推出首款定制推理芯片Jalapeño，采用台积电3nm工艺，从设计到量产仅用9个月。专为ChatGPT和Codex推理服务优化，能效"显著优于当前业界最优方案"。标志着OpenAI正式进军芯片设计领域。</p>
-<div class="meta">📅 2026-06-25 | <a href="https://news.mydrivers.com/1/1132/1132467.htm">报道详情</a></div>
-</div>
-
-<div class="card card-orange">
-<h3>2. Anthropic指控阿里巴巴2880万次Claude蒸馏攻击</h3>
-<p>Anthropic向美国政府和媒体发出正式信函，指控阿里利用虚假账户系统性提取Claude能力，总计2880万次交互训练Qwen模型。CNBC、彭博社、华尔街日报均重点报道。</p>
-<div class="meta">📅 2026-06-10 | <a href="https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html">CNBC独家</a></div>
-</div>
-
-<div class="card card-accent">
-<h3>3. Anthropic 650亿美元融资，估值9650亿秘密提交IPO</h3>
-<p>Anthropic完成650亿美元巨额融资，投后估值9650亿美元首超OpenAI。Claude Code年化收入超25亿美元成核心引擎。从41亿到9650亿仅用3年。</p>
-<div class="meta">📅 2026-05-28 | <a href="https://m.toutiao.com/article/7653868811384406580/">详情</a></div>
+<div class="card">
+<h3><span class="num">1</span>OpenAI与Broadcom联合发布首款自研推理芯片Jalapeño</h3>
+<p>OpenAI推出首款定制AI芯片，由Broadcom合作打造，从设计到量产仅9个月。专为LLM推理设计，成本降低50%，实现"用AI设计AI芯片"的闭环。</p>
+<div class="meta"><span>📅 2026-06-24</span><a href="https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/" target="_blank">🔗 TechCrunch</a></div>
 </div>
 
 <div class="card">
-<h3>4. 谷歌DeepMind四名核心研究员集体出走</h3>
-<p>AlphaFold负责人John Jumper（诺贝尔奖得主）领衔，至少4名核心人才转投Anthropic。核心原因是GPU算力资源争夺。</p>
-<div class="meta">📅 2026-06-24 | <a href="http://g.pconline.com.cn/x/2177/21771523.html">报道</a></div>
-</div>
-
-<div class="card card-green">
-<h3>5. SK海力士计划赴美纳斯达克上市，筹资约290亿美元</h3>
-<p>全球最大AI内存芯片供应商SK海力士计划最早7月登陆纳斯达克。若成功将成为SpaceX之后最大科技IPO，为AI基础设施投资开辟新渠道。</p>
-<div class="meta">📅 2026-06-24 | <a href="https://m.163.com/dy/article/L075EP0P0534A4SC.html">详情</a></div>
+<h3><span class="num">2</span>谷歌算力告急，正式限制Meta使用Gemini</h3>
+<p>谷歌因GPU算力严重不足对Meta的Gemini API调用施加限制，HBM芯片短缺致三大巨头产能缺口超50%，算力瓶颈已成AI发展最大制约。</p>
+<div class="meta"><span>📅 2026-06-29</span><a href="https://news.qq.com/rain/a/20260629A05IXM00" target="_blank">🔗 腾讯新闻</a></div>
 </div>
 
 <div class="card">
-<h3>6. Alphabet取代Verizon纳入道琼斯工业平均指数</h3>
-<p>Alphabet正式取代Verizon被纳入道琼斯指数，年收入4220亿美元。反映科技巨头在美国经济中日益增长的核心地位。</p>
-<div class="meta">📅 2026-06-26 | <a href="https://finance.sina.cn/2026-06-26/detail-inietspn0545437.d.html">详情</a></div>
-</div>
-
-<div class="card card-accent">
-<h3>7. 高通发布Dragonfly C1000，签下Meta微软大单</h3>
-<p>高通发布250核5GHz Dragonfly C1000服务器CPU（RISC-V架构），Meta签署多代供应协议，微软部署HBC芯片。2029年非手机营收目标400亿美元。</p>
-<div class="meta">📅 2026-06-25 | <a href="https://m.toutiao.com/article/7655300864759890438/">详情</a></div>
-</div>
-
-<div class="card card-orange">
-<h3>8. 阿里巴巴正式起诉美国国防部</h3>
-<p>阿里向加州联邦法院提起诉讼，挑战"1260H涉军黑名单"决定，称其"毫无事实依据、武断且反复无常"。中国科技企业首次以法律手段正面挑战美国军事制裁名单。</p>
-<div class="meta">📅 2026-06-25 | <a href="https://m.163.com/dy/article/L08VJO5P0531EI67.html">详情</a></div>
-</div>
-
-<div class="card card-green">
-<h3>9. DeepSeek V4-Pro永久降价75%</h3>
-<p>DeepSeek将V4-Pro API价格永久降至原价四分之一，创全球主流大模型价格新低。被视为以极致性价比策略抢占企业市场的關鍵举措。</p>
-<div class="meta">📅 2026-05-25 | <a href="https://apifox.com/apiskills/deepseek-v4-pro-permanent-price-cut-developers-guide/">开发者指南</a></div>
+<h3><span class="num">3</span>Anthropic指控阿里巴巴2.5万假账号蒸馏Claude</h3>
+<p>Anthropic称阿里关联方使用数千虚假账号，4-6月间对Claude进行2880万次交互，系统性提取模型能力。事件升级至地缘政治层面。</p>
+<div class="meta"><span>📅 2026-06-24</span><a href="https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html" target="_blank">🔗 CNBC</a></div>
 </div>
 
 <div class="card">
-<h3>10. 科罗拉多州AI法案6月30日生效</h3>
-<p>全美首个州级AI反歧视法即将生效，最新修正案将主体合规期推迟至2027年1月。马斯克旗下公司已对此发起诉讼。</p>
-<div class="meta">📅 2026-06-30 | <a href="https://verifywise.ai/blog/state-of-ai-governance-regulations-united-states-2026">法案解析</a></div>
+<h3><span class="num">4</span>SpaceX 600亿美元收购Cursor</h3>
+<p>马斯克旗下SpaceX以600亿美元完成收购AI编程独角兽Cursor，前50名早期员工人均回报数千万美元，AI编程赛道进入大规模整合时代。</p>
+<div class="meta"><span>📅 2026-06-23</span><a href="https://news.qq.com/rain/a/20260617A02TN700" target="_blank">🔗 腾讯新闻</a></div>
 </div>
 
-<div class="card card-accent">
-<h3>11. 智谱GLM-5.2开源：MIT协议，百万上下文</h3>
-<p>智谱发布并开源旗舰模型GLM-5.2，100万token无损上下文，Code Arena全球前列。MIT协议免费商用，已上线阿里云百炼。</p>
-<div class="meta">📅 2026-06-17 | <a href="http://digital.it168.com/a2026/0617/6935/000006935096.shtml">详情</a></div>
+<div class="card">
+<h3><span class="num">5</span>GPT-5.6系列即将发布：150万上下文、原生Agent</h3>
+<p>OpenAI GPT-5.6系列（Sol/Terra/Luna）预计本周内发布，提供150万token上下文、原生Agent能力，重新设计奖励审计管道。</p>
+<div class="meta"><span>📅 2026-06-28</span><a href="https://m.toutiao.com/article/7654202450110366260/" target="_blank">🔗 头条</a></div>
 </div>
 
-<div class="card card-warm">
-<h3>12. 2026世界人工智能大会定档7月17日上海</h3>
-<p>超300款AI产品全球首发，涵盖大模型、AI应用、机器人等领域。配套人工智能全球治理高级别会议。</p>
-<div class="meta">📅 2026-06-17 | <a href="https://finance.jrj.com.cn/2026/06/18112457511542.shtml">详情</a></div>
+<div class="card">
+<h3><span class="num">6</span>字节跳动发布豆包大模型2.1 Pro</h3>
+<p>火山引擎FORCE大会上发布豆包2.1 Pro，编程推理四大维度实现"生产级质变点"，日均tokens调用行业领先，定价远低于竞品。</p>
+<div class="meta"><span>📅 2026-06-24</span><a href="https://www.stcn.com/article/detail/3973860.html" target="_blank">🔗 证券时报</a></div>
+</div>
+
+<div class="card">
+<h3><span class="num">7</span>Apple WWDC 2026发布自研AFM基础模型</h3>
+<p>苹果发布五款自研AFM基础模型，端侧剪枝+云端推理，隐私优先。Gemini用作"后训练教师信号"但声称模型不含一滴Gemini。</p>
+<div class="meta"><span>📅 2026-06-08</span><a href="https://appleinsider.com/articles/26/06/08/apples-new-foundation-models-dont-contain-a-drop-of-gemini-as-we-said-they-wouldnt" target="_blank">🔗 AppleInsider</a></div>
+</div>
+
+<div class="card">
+<h3><span class="num">8</span>Google DeepMind核心研究员持续流失</h3>
+<p>AlphaFold负责人John Jumper加入Anthropic，AI编码主管转投OpenAI。谷歌内部GPU分配政治斗争被认为是主因，"系统性挖空Gemini团队"。</p>
+<div class="meta"><span>📅 2026-06-24</span><a href="https://www.bloomberg.com/news/articles/2026-06-24/google-poised-to-lose-two-more-high-profile-ai-staffers-to-anthropic" target="_blank">🔗 Bloomberg</a></div>
+</div>
+
+<div class="card">
+<h3><span class="num">9</span>Gemini 3.5 Pro推迟至7月发布</h3>
+<p>Alphabet将Gemini 3.5 Pro GA从6月推至7月，优化模型性能和Token效率。在人才流失和算力紧张双重压力下，"叙事代价高昂"。</p>
+<div class="meta"><span>📅 2026-06-24</span><a href="https://timesofindia.indiatimes.com/technology/tech-news/google-delays-launch-of-gemini-3-5-pro-that-ceo-sundar-pichai-said-coming-in-june-says-it-needs-to-spend-extra-time-for-/articleshow/131993789.cms" target="_blank">🔗 Times of India</a></div>
+</div>
+
+<div class="card">
+<h3><span class="num">10</span>8090 Labs完成1.35亿美元A轮融资</h3>
+<p>AI编程公司8090 Labs获Salesforce Ventures领投的1.35亿美元A轮，新CEO Chamas上任，进一步验证AI编程赛道资本热度。</p>
+<div class="meta"><span>📅 2026-06-30</span><a href="https://finance.sina.cn/2026-06-30/detail-inifcewh5172866.d.html" target="_blank">🔗 新浪财经</a></div>
+</div>
+
+<div class="card">
+<h3><span class="num">11</span>中国多部门密集出台AI全链条监管政策</h3>
+<p>2026年6月多部门联合发布8项AI政策，涵盖数据安全、模型备案、算法透明度等，划定行业红线，AI产业正式进入规范化阶段。</p>
+<div class="meta"><span>📅 2026-06-30</span><a href="https://www.toutiao.com/a7655705702731694607/" target="_blank">🔗 头条</a></div>
+</div>
+
+<div class="card">
+<h3><span class="num">12</span>三星计划在光州新建先进封装工厂</h3>
+<p>面对AI芯片需求爆发，三星考虑在光州建设35年来首座先进封装基地，投资或达数十亿美元，应对HBM短缺和封装产能不足。</p>
+<div class="meta"><span>📅 2026-06-29</span><a href="https://tech.ifeng.com/c/8tqHLa2XcZS" target="_blank">🔗 凤凰网</a></div>
 </div>
 </div>
 
-<!-- 应用前线 -->
+<!-- 🛠️ AI 应用前线 -->
 <div class="section" id="apps">
 <div class="section-title">🛠️ AI 应用前线</div>
 
-<div class="card card-accent">
-<h3>1. Anthropic Claude Fable 5 & Mythos 5</h3>
-<p>Anthropic推出新模型系列，Fable 5专注创意生成，Mythos 5侧重推理和代码。在所有基准测试上取得屠榜级成绩。</p>
-<div class="meta">📅 2026-06-10 | <a href="https://mcp.csdn.net/6a3a57e610ee7a33f28147e4.html">详情</a></div>
+<div class="card">
+<h3><span class="num">1</span>Anthropic推出Claude Tag：AI变身Slack虚拟同事</h3>
+<p>企业协作工具Claude Tag（Beta）让团队在Slack中嵌入持久化AI助手，@即可调用，支持任务追踪和上下文记忆。AI从"个人工具"到"团队成员"。</p>
+<div class="meta"><span>📅 2026-06-23</span><a href="https://m.163.com/dy/article/L05J7HVG055680UT.html" target="_blank">🔗 网易</a></div>
 </div>
 
 <div class="card">
-<h3>2. Cognition推出FrontierCode编程基准</h3>
-<p>全新AI编程评估基准，专注评估"生产就绪"级别Pull Request生成能力。Fable 5目前排行榜第一。</p>
-<div class="meta">📅 2026-06 | <a href="https://www.buildfastwithai.com/blogs/ai-coding-tools">详情</a></div>
-</div>
-
-<div class="card card-green">
-<h3>3. design.md — AI设计系统规范工具 <span class="badge">22.3K ⭐</span></h3>
-<p>Google Labs推出的设计系统规范格式，使AI编码助手能更准确理解和实现UI设计意图。今日+1,541 stars。</p>
-<div class="meta">📅 2026-06-28 | <a href="https://github.com/google-labs-code/design.md">GitHub</a></div>
-</div>
-
-<div class="card card-orange">
-<h3>4. opencode — 开源编程代理 <span class="badge">179.7K ⭐</span></h3>
-<p>Anomaly推出的开源编程代理工具持续火爆，提供无限制AI编程辅助体验。今日+392 stars。</p>
-<div class="meta">📅 2026-06-28 | <a href="https://github.com/anomalyco/opencode">GitHub</a></div>
+<h3><span class="num">2</span>网易有道开源Confucius4-TTS：3秒克隆音色</h3>
+<p>业内首个14语种跨语种无口音免文本语音克隆模型，仅需3秒参考音频即可高质量克隆，多语言语音合成领先。</p>
+<div class="meta"><span>📅 2026-06-23</span><a href="https://ai-bot.cn/confucius4-tts/" target="_blank">🔗 AI-Bot</a></div>
 </div>
 
 <div class="card">
-<h3>5. ppt-master — AI文档转PPT <span class="badge">33.1K ⭐</span></h3>
-<p>将文档转换为可编辑PPT，支持原生动画、音频旁白和自定义模板。今日+589 stars。</p>
-<div class="meta">📅 2026-06-28 | <a href="https://github.com/hugohe3/ppt-master">GitHub</a></div>
-</div>
-
-<div class="card card-accent">
-<h3>6. cognee — AI代理知识图谱引擎 <span class="badge">24.0K ⭐</span></h3>
-<p>开源知识图谱引擎，为AI代理提供跨会话持久化长期记忆。今日+780 stars。</p>
-<div class="meta">📅 2026-06-28 | <a href="https://github.com/topoteretes/cognee">GitHub</a></div>
-</div>
-
-<div class="card card-warm">
-<h3>7. OpenSpec — 规范驱动AI编程框架 <span class="badge">57.1K ⭐</span></h3>
-<p>规范驱动的开发方法论，专为AI编程助手设计，先写规范再写代码。今日+177 stars。</p>
-<div class="meta">📅 2026-06-28 | <a href="https://github.com/Fission-AI/OpenSpec">GitHub</a></div>
-</div>
-
-<div class="card card-green">
-<h3>8. ai-berkshire — AI价值投资框架 <span class="badge">4.1K ⭐</span></h3>
-<p>融合四位投资大师方法论的AI价值投资研究框架，多代理分析进行股票评估。今日+685 stars。</p>
-<div class="meta">📅 2026-06-28 | <a href="https://github.com/xbtlin/ai-berkshire">GitHub</a></div>
+<h3><span class="num">3</span>NVIDIA发布BioNeMo Agent Toolkit</h3>
+<p>帮助科研人员自动化文献检索和计算实验，50+头部企业已使用，诺贝尔奖得主公开点赞的开源AI4S智能体工具箱。</p>
+<div class="meta"><span>📅 2026-06-26</span><a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-BioNeMo-Agent-Toolkit--Tools-for-Agents-to-Accelerate-Scientific-Discovery/default.aspx" target="_blank">🔗 NVIDIA</a></div>
 </div>
 
 <div class="card">
-<h3>9. Vibe-Trading — 自动交易AI代理 <span class="badge">13.7K ⭐</span></h3>
-<p>香港大学推出的个性化自动交易代理，根据用户偏好和市场状态自主执行策略。今日+92 stars。</p>
-<div class="meta">📅 2026-06-28 | <a href="https://github.com/HKUDS/Vibe-Trading">GitHub</a></div>
+<h3><span class="num">4</span>Cursor推出iPhone应用：随时随地运行编码Agent</h3>
+<p>AI编程助手Cursor发布移动端，开发者可在任何地方远程启动和管理编码Agent，实现实时协作。</p>
+<div class="meta"><span>📅 2026-06-30</span><a href="https://www.reddit.com/r/AIGuild/comments/1uj8ul2/cursor_launches_an_iphone_app_that_lets/" target="_blank">🔗 Reddit</a></div>
 </div>
 
-<div class="card card-accent">
-<h3>10. Azure Databricks 2026年6月更新</h3>
-<p>新增AI模型训练管线改进、增强数据治理能力和Azure AI服务更紧密集成。</p>
-<div class="meta">📅 2026-06 | <a href="https://learn.microsoft.com/en-us/azure/databricks/release-notes/product/2026/june">详情</a></div>
+<div class="card">
+<h3><span class="num">5</span>百度开源Unlimited OCR，5天Star破万</h3>
+<p>面向长文档的端到端OCR模型，仅3B参数即登顶多榜，开源5天GitHub Star破万，带动百度港股涨超8%。</p>
+<div class="meta"><span>📅 2026-06-29</span><a href="https://finance.sina.cn/stock/jdts/2026-06-29/detail-inifaiss5473852.d.html" target="_blank">🔗 新浪财经</a></div>
 </div>
 
-<div class="card card-orange">
-<h3>11. AI编程赛道四巨头全面开战</h3>
-<p>微软和谷歌加速追赶Anthropic和OpenAI在AI编程领域的领先地位，四大巨头各自投入数十亿美元和数千工程师。</p>
-<div class="meta">📅 2026-06-01 | <a href="https://www.cnbc.com/2026/06/01/microsoft-and-google-take-on-anthropic-and-openai-in-ai-coding-models.html">CNBC报道</a></div>
+<div class="card">
+<h3><span class="num">6</span>高德内测"袋马"：一句话生成小程序App</h3>
+<p>无代码开发工具，自然语言对话即可生成可运行移动端应用，面向小微商户和个人创作者。</p>
+<div class="meta"><span>📅 2026-06-29</span><a href="https://www.aitop100.cn/infomation/details/34144.html" target="_blank">🔗 AITop100</a></div>
+</div>
+
+<div class="card">
+<h3><span class="num">7</span>北大联合DeepSeek开源DSpark推理框架</h3>
+<p>双层网络推理加速架构+智能调度，解决长文本生成算力浪费和延迟，多款主流模型验证兼容，代码全面开源。</p>
+<div class="meta"><span>📅 2026-06-28</span><a href="https://www.aitop100.cn/infomation/details/34145.html" target="_blank">🔗 AITop100</a></div>
+</div>
+
+<div class="card">
+<h3><span class="num">8</span>OceanBase发布湖库一体AI数据库</h3>
+<p>AI数据库三件套，集成大规模存储+多模态处理，TCO降低30%-50%，蚂蚁阿福和灵光已在生产环境使用。</p>
+<div class="meta"><span>📅 2026-06-29</span><a href="https://m.163.com/dy/article/L0K07N6H051180F7.html" target="_blank">🔗 网易</a></div>
+</div>
+
+<div class="card">
+<h3><span class="num">9</span>腾讯企业微信内测"大圆Agent"</h3>
+<p>AI工作者入驻企业微信，提供自动化聊天摘要和运营数据看板，AI Agent深度嵌入企业办公通讯。</p>
+<div class="meta"><span>📅 2026-06-23</span><a href="https://www.aibetas.com.cn/p/6286.html" target="_blank">🔗 AIbetas</a></div>
+</div>
+
+<div class="card">
+<h3><span class="num">10</span>OpenClaw推出iOS原生应用</h3>
+<p>在Apple移动设备上安全运行自托管AI Agent，无需云端服务，为个人AI Agent隐私保护提供新方案。</p>
+<div class="meta"><span>📅 2026-06-30</span><a href="https://www.aibase.com/news" target="_blank">🔗 AIBase</a></div>
+</div>
+
+<div class="card">
+<h3><span class="num">11</span>Google Gemini 3.5系统级实时语音翻译</h3>
+<p>Pixel和Galaxy设备系统级实时通话翻译，支持数十种语言，无需云端即可在设备端完成。</p>
+<div class="meta"><span>📅 2026-06-30</span><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-26-2026" target="_blank">🔗 BuildFast</a></div>
+</div>
+
+<div class="card">
+<h3><span class="num">12</span>Coinbase切换国产模型，运营成本减半</h3>
+<p>加密交易平台全面替换为智谱GLM和Kimi模型，运营成本直接削减50%，在海外科技公司中引发示范效应。</p>
+<div class="meta"><span>📅 2026-06-29</span><a href="https://www.aitop100.cn/ai-daily-2026-06-29" target="_blank">🔗 AITop100</a></div>
 </div>
 </div>
 
-<!-- 数据速递 -->
+<!-- 📊 数据速递 -->
 <div class="section" id="data">
 <div class="section-title">📊 数据速递</div>
 <div class="data-grid">
-<div class="data-item"><div class="num">9,650亿美元</div><div class="desc">Anthropic最新估值，首超OpenAI成全球估值最高AI公司</div><div class="src">来源：Anthropic官方</div></div>
-<div class="data-item"><div class="num">650亿美元</div><div class="desc">Anthropic最新一轮融资，创AI行业单轮融资纪录</div><div class="src">来源：腾讯新闻</div></div>
-<div class="data-item"><div class="num">25亿美元+</div><div class="desc">Claude Code年化收入，9个月1000+企业客户</div><div class="src">来源：头条报道</div></div>
-<div class="data-item"><div class="num">93亿美元</div><div class="desc">2026年AI编程工具市场规模</div><div class="src">来源：BuildFastWithAI</div></div>
-<div class="data-item"><div class="num">3,300亿美元+</div><div class="desc">2026 Q1全球AI融资，80%流向AI公司</div><div class="src">来源：LinkedIn</div></div>
-<div class="data-item"><div class="num">75%</div><div class="desc">DeepSeek V4-Pro永久降价幅度，创主流大模型价格新低</div><div class="src">来源：同花顺</div></div>
-<div class="data-item"><div class="num">4,220亿美元</div><div class="desc">Alphabet年收入，使其纳入道琼斯指数</div><div class="src">来源：Unrot</div></div>
-<div class="data-item"><div class="num">70分</div><div class="desc">Fable 5 DeepSWE基准得分，史上最高</div><div class="src">来源：Datacurve</div></div>
-<div class="data-item"><div class="num">300+款</div><div class="desc">世界人工智能大会将全球首发的AI产品数</div><div class="src">来源：央广网</div></div>
-<div class="data-item"><div class="num">9个月</div><div class="desc">OpenAI Jalapeño芯片从设计到量产时间</div><div class="src">来源：OpenAI Blog</div></div>
-<div class="data-item"><div class="num">290亿美元</div><div class="desc">SK海力士赴美上市目标筹资额</div><div class="src">来源：网易</div></div>
-<div class="data-item"><div class="num">2,200亿美元</div><div class="desc">2026年前两个月AI初创企业累计融资</div><div class="src">来源：新浪财经</div></div>
+<div class="data-item"><span class="value">93亿$</span><span class="label">AI编程工具市场规模</span><span class="source">来源：CNBC</span></div>
+<div class="data-item"><span class="value">50%</span><span class="label">HBM芯片全球产能缺口</span><span class="source">来源：头条</span></div>
+<div class="data-item"><span class="value">7250亿$</span><span class="label">全年AI基础设施资本开支</span><span class="source">来源：头条</span></div>
+<div class="data-item"><span class="value">160周</span><span class="label">变压器交货周期</span><span class="source">来源：头条</span></div>
+<div class="data-item"><span class="value">5天1万⭐</span><span class="label">百度OCR开源GitHub热度</span><span class="source">来源：新浪财经</span></div>
+<div class="data-item"><span class="value">2880万</span><span class="label">阿里蒸馏Claude交互次数</span><span class="source">来源：CNBC</span></div>
+<div class="data-item"><span class="value">600亿$</span><span class="label">SpaceX收购Cursor金额</span><span class="source">来源：腾讯新闻</span></div>
+<div class="data-item"><span class="value">50%↓</span><span class="label">Coinbase切换模型后成本降幅</span><span class="source">来源：AITop100</span></div>
+<div class="data-item"><span class="value">3B→600B</span><span class="label">VibeThinker追平大模型能力</span><span class="source">来源：新浪</span></div>
+<div class="data-item"><span class="value">14语种</span><span class="label">Confucius4-TTS跨语种克隆</span><span class="source">来源：AI-Bot</span></div>
 </div>
 </div>
 
-<!-- 今日概览 -->
-<div class="section">
+<!-- 📊 今日概览 -->
+<div class="section" id="overview">
 <div class="section-title">📊 今日概览</div>
 <table class="overview-table">
-<tr><th>指标</th><th>数据</th></tr>
-<tr><td>日期</td><td>2026-06-28</td></tr>
+<tr><th>指标</th><th>数值</th></tr>
+<tr><td>日期</td><td>2026年6月30日</td></tr>
 <tr><td>ArXiv精选论文</td><td>6篇</td></tr>
-<tr><td>GitHub趋势项目</td><td>20个</td></tr>
-<tr><td>新闻事件</td><td>22+条</td></tr>
-<tr><td>重大融资/IPO</td><td>4起</td></tr>
-<tr><td>产品/工具发布</td><td>11+个</td></tr>
-<tr><td>政策/监管动态</td><td>3项</td></tr>
+<tr><td>GitHub趋势项目</td><td>18个</td></tr>
+<tr><td>重大新闻事件</td><td>12件</td></tr>
+<tr><td>产品/应用动态</td><td>12项</td></tr>
+<tr><td>深度趋势分析</td><td>7条</td></tr>
+<tr><td>补充新闻看点</td><td>10条</td></tr>
 </table>
 </div>
 
-<!-- ArXiv论文 -->
+<!-- 🔬 ArXiv 今日精选论文 -->
 <div class="section" id="papers">
 <div class="section-title">🔬 ArXiv 今日精选论文</div>
 
 <div class="paper-card">
-<div class="paper-cat">AI安全与可靠性</div>
-<h3>Capability Self-Assessment: Teaching LLMs to Know Their Limits</h3>
-<div class="authors">Haoyan Yang, Reza Shirkavand, Yukai Jin, Jiawei Zhou, Shangqian Gao, Heng Huang</div>
-<div class="abstract">本文提出了一种训练大语言模型准确评估自身能力边界的新方法。研究团队设计了分层评估框架，使模型能在回答问题的同时输出答案可靠性置信度评分。通过对比模型内部表示与实际性能的映射关系，训练出轻量的"元评估模块"。实验表明模型能显著降低"过度自信"错误，对医疗、法律等高风险场景部署具有关键意义——"知道自己不知道什么"与"知道什么"同样重要。</div>
-<div class="meta">📅 2026-06 | <a href="https://arxiv.org/list/cs.AI/current">ArXiv</a></div>
+<h3>📂 模型效率</h3>
+<div class="paper-title">参数预算不变性能却大幅提升？Mila与康奈尔揭示语言模型的"免费午餐"</div>
+<p>研究团队发现不增加参数预算，通过优化训练策略和架构微调可显著提升性能。揭示了"隐藏效率空间"，挑战"更大即更好"的认知，对端侧部署和成本敏感应用有重要指导意义。</p>
+<div class="meta">📅 2026-06-25 | <a href="https://new.qq.com/rain/a/20260625A04FYX00" target="_blank">🔗 论文详情</a></div>
 </div>
 
 <div class="paper-card">
-<div class="paper-cat">多模态生成幻觉缓解</div>
-<h3>TIGER: Traceable Inference with Graph-Based Evidence Routing for Mitigating Hallucinations in Multimodal Generation</h3>
-<div class="authors">Kaixiang Zhao, Tianrun Yu, Shawn Huang, Porter Jenkins, Yushun Dong, Amanda Hughes</div>
-<div class="abstract">多模态大模型在生成图文混合内容时容易产生"幻觉"。TIGER框架构建证据图来追踪推理链条中每一步逻辑，确保生成内容可溯源、可验证。系统将多模态信息分解为节点和边，每个生成决策必须通过图中可追溯的证据路径支撑。在多个基准测试上将幻觉率降低40%以上，同时保持生成质量和流畅度。</div>
-<div class="meta">📅 2026-06 | <a href="https://arxiv.org/list/cs.AI/current">ArXiv</a></div>
+<h3>📂 推理模型</h3>
+<div class="paper-title">VibeThinker-3B：30亿参数密集推理模型追平200倍大模型</div>
+<p>微博AI团队开源的3B参数模型在数学推理和编程任务上表现出与600B级大模型相当的能力。论文提出"参数压缩-覆盖假说"，论证推理能力可在小参数量模型中高效编码，为资源受限场景开辟新路径。</p>
+<div class="meta">📅 2026-06-29 | <a href="https://ai-bot.cn/vibethinker-3b/" target="_blank">🔗 论文详情</a></div>
 </div>
 
 <div class="paper-card">
-<div class="paper-cat">推理时自适应优化</div>
-<h3>Latent Reward Steering: An Adaptive Inference-Time Framework for Reasoning LLMs</h3>
-<div class="authors">Jiakang Li, Guanyu Zhu, Can Jin, Chenxi Huang, Dexu Yu, et al.</div>
-<div class="abstract">提出在不修改模型权重的前提下，推理阶段动态引导LLM产生更类人思维过程的新框架。通过"潜在奖励信号"在生成过程中微妙引导推理方向。不需要额外训练或微调，通过监测中间表示动态调整生成策略。在数学推理、逻辑推理和代码生成任务上平均性能提升15-25%。</div>
-<div class="meta">📅 2026-06 | <a href="https://arxiv.org/list/cs.AI/current">ArXiv</a></div>
+<h3>📂 推理加速</h3>
+<div class="paper-title">DSpark：北大联合DeepSeek开源高效推理框架</div>
+<p>双层网络推理加速架构配合智能任务调度，有效解决长文本生成算力浪费和高延迟。在多款主流模型上验证兼容性，为企业降低AI推理部署成本提供实用方案，代码完全开源。</p>
+<div class="meta">📅 2026-06-28 | <a href="https://www.aitop100.cn/infomation/details/34145.html" target="_blank">🔗 论文详情</a></div>
 </div>
 
 <div class="paper-card">
-<div class="paper-cat">安全强化学习</div>
-<h3>Robust Shielding for Safe Reinforcement Learning</h3>
-<div class="authors">Edwin Hamel-De le Court, Thom Badings, Alessandro Abate, Francesco Belardinelli, Francesco Fabiano</div>
-<div class="abstract">强化学习代理在探索过程中可能采取危险动作。本文提出"鲁棒防护"机制，基于形式化验证理论，能数学证明每个动作满足安全约束，即使在模型不确定性和外部扰动下也保证安全。实验在多个连续控制任务上消除了95%以上不安全行为，几乎不牺牲性能。</div>
-<div class="meta">📅 2026-06 | <a href="https://arxiv.org/list/cs.AI/current">ArXiv</a></div>
+<h3>📂 多模态学习</h3>
+<div class="paper-title">AAAI 2026优秀论文：大语言模型增强跨模态学习</div>
+<p>探讨利用LLM语义理解增强跨模态学习，提出新颖对齐机制使视觉、语言、音频等多模态信息在统一表征空间高效交互，多个基准取得SOTA结果。</p>
+<div class="meta">📅 2026-01-23 | <a href="https://view.inews.qq.com/wxn/20260123A04G1500" target="_blank">🔗 论文详情</a></div>
 </div>
 
 <div class="paper-card">
-<div class="paper-cat">可验证数学推理</div>
-<h3>AXIOM: A Trust-First Neuro-Symbolic Architecture for Verifiable Mathematical Reasoning</h3>
-<div class="authors">Alessio Bruno</div>
-<div class="abstract">AXIOM将神经网络直觉推理能力与符号逻辑形式化验证能力深度融合。系统先通过神经网络生成候选证明路径，再用符号执行引擎严格验证每一步。验证失败时回溯尝试替代路径。每个答案都附带完整可验证的证明链条，在数学推理基准上保持高准确率的同时实现完全透明。</div>
-<div class="meta">📅 2026-06 | <a href="https://arxiv.org/list/cs.AI/current">ArXiv</a></div>
+<h3>📂 代码安全</h3>
+<div class="paper-title">LLM代码漏洞检测实证评估：RAG、SFT与双Agent系统</div>
+<p>系统评估三种基于LLM的代码漏洞检测方法——RAG、SFT和双Agent协作。双Agent系统在复杂漏洞检测中表现最佳，为软件安全AI应用提供重要实践指导。</p>
+<div class="meta">📅 2026-06 | <a href="https://www.aminer.cn/pub/695b1db294d1bc07b4bbd808/" target="_blank">🔗 论文详情</a></div>
 </div>
 
 <div class="paper-card">
-<div class="paper-cat">高效监督学习</div>
-<h3>Weak Critics Make Strong Learners: On-Policy Critique Distillation for Scalable Oversight</h3>
-<div class="authors">Can Jin, Jiakang Li, Rui Wu, Eddy Zhang, Dimitris N. Metaxas</div>
-<div class="abstract">揭示了一个反直觉发现：使用低质量"弱批评者"反馈进行训练，通过"策略上批评蒸馏"方法反而能产生高度优秀的模型。强模型在接受弱批评过程中学会从低质量信号提取有价值信息并过滤噪声。对降低AI训练成本、实现大规模自动化监督具有重要意义。</div>
-<div class="meta">📅 2026-06 | <a href="https://arxiv.org/list/cs.AI/current">ArXiv</a></div>
+<h3>📂 计算机视觉</h3>
+<div class="paper-title">CVPR 2026论文精选：视觉Agent与多模态交互创新高</div>
+<p>CVPR 2026发布大量前沿成果，涵盖图像生成、3D重建、视频理解和视觉Agent等方向。视觉Agent和多模态交互方向的论文数量和质量均创新高，反映AI从"感知"向"行动"转变的大趋势。</p>
+<div class="meta">📅 2026-06-07 | <a href="https://openaccess.thecvf.com/CVPR2026?day=2026-06-07" target="_blank">🔗 CVPR Open Access</a></div>
 </div>
 </div>
 
-<!-- GitHub趋势 -->
+<!-- 🚀 GitHub AI 趋势日榜 -->
 <div class="section" id="github">
 <div class="section-title">🚀 GitHub AI 趋势日榜</div>
-<div style="overflow-x:auto">
-<table class="gh-table">
-<tr><th>#</th><th>项目</th><th>描述</th><th>语言</th><th>今日⭐</th></tr>
-<tr><td>1</td><td><a href="https://github.com/anomalyco/opencode">anomalyco/opencode</a></td><td>开源AI编程代理</td><td><span class="gh-lang">TypeScript</span></td><td class="gh-stars">+392</td></tr>
-<tr><td>2</td><td><a href="https://github.com/microsoft/PowerToys">microsoft/PowerToys</a></td><td>Windows系统工具集</td><td><span class="gh-lang">C</span></td><td class="gh-stars">+57</td></tr>
-<tr><td>3</td><td><a href="https://github.com/ripienaar/free-for-dev">ripienaar/free-for-dev</a></td><td>开发者免费云资源</td><td><span class="gh-lang">HTML</span></td><td class="gh-stars">+459</td></tr>
-<tr><td>4</td><td><a href="https://github.com/garrytan/gstack">garrytan/gstack</a></td><td>23个AI编程代理配置</td><td><span class="gh-lang">TypeScript</span></td><td class="gh-stars">+674</td></tr>
-<tr><td>5</td><td><a href="https://github.com/Fission-AI/OpenSpec">Fission-AI/OpenSpec</a></td><td>规范驱动AI编程框架</td><td><span class="gh-lang">TypeScript</span></td><td class="gh-stars">+177</td></tr>
-<tr><td>6</td><td><a href="https://github.com/NanmiCoder/MediaCrawler">NanmiCoder/MediaCrawler</a></td><td>多平台社交数据采集</td><td><span class="gh-lang">Python</span></td><td class="gh-stars">+394</td></tr>
-<tr><td>7</td><td><a href="https://github.com/luongnv89/claude-howto">luongnv89/claude-howto</a></td><td>AI编程进阶指南</td><td><span class="gh-lang">Python</span></td><td class="gh-stars">+141</td></tr>
-<tr><td>8</td><td><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a></td><td>开源个人云平台</td><td><span class="gh-lang">Go</span></td><td class="gh-stars">+502</td></tr>
-<tr><td>9</td><td><a href="https://github.com/keycloak/keycloak">keycloak/keycloak</a></td><td>身份与访问管理</td><td><span class="gh-lang">Java</span></td><td class="gh-stars">+20</td></tr>
-<tr><td>10</td><td><a href="https://github.com/hugohe3/ppt-master">hugohe3/ppt-master</a></td><td>AI文档转PPT</td><td><span class="gh-lang">Python</span></td><td class="gh-stars">+589</td></tr>
-<tr><td>11</td><td><a href="https://github.com/topoteretes/cognee">topoteretes/cognee</a></td><td>AI代理知识图谱引擎</td><td><span class="gh-lang">Python</span></td><td class="gh-stars">+780</td></tr>
-<tr><td>12</td><td><a href="https://github.com/google-labs-code/design.md">google-labs-code/design.md</a></td><td>AI设计系统规范</td><td><span class="gh-lang">TypeScript</span></td><td class="gh-stars">+1,541</td></tr>
-<tr><td>13</td><td><a href="https://github.com/JCodesMore/ai-website-cloner-template">JCodesMore/ai-website-cloner-template</a></td><td>AI一键克隆网站</td><td><span class="gh-lang">TypeScript</span></td><td class="gh-stars">+750</td></tr>
-<tr><td>14</td><td><a href="https://github.com/Anil-matcha/Open-Generative-AI">Anil-matcha/Open-Generative-AI</a></td><td>自托管媒体生成工作室</td><td><span class="gh-lang">JavaScript</span></td><td class="gh-stars">+255</td></tr>
-<tr><td>15</td><td><a href="https://github.com/simplex-chat/simplex-chat">simplex-chat/simplex-chat</a></td><td>完全隐私通讯网络</td><td><span class="gh-lang">Haskell</span></td><td class="gh-stars">+1,469</td></tr>
-<tr><td>16</td><td><a href="https://github.com/HKUDS/Vibe-Trading">HKUDS/Vibe-Trading</a></td><td>个性化自动交易代理</td><td><span class="gh-lang">Python</span></td><td class="gh-stars">+92</td></tr>
-<tr><td>17</td><td><a href="https://github.com/dbt-labs/dbt-core">dbt-labs/dbt-core</a></td><td>SQL数据转换工具</td><td><span class="gh-lang">Rust</span></td><td class="gh-stars">+18</td></tr>
-<tr><td>18</td><td><a href="https://github.com/xbtlin/ai-berkshire">xbtlin/ai-berkshire</a></td><td>AI价值投资框架</td><td><span class="gh-lang">Python</span></td><td class="gh-stars">+685</td></tr>
-<tr><td>19</td><td><a href="https://github.com/every-app/open-seo">every-app/open-seo</a></td><td>开源SEO分析平台</td><td><span class="gh-lang">TypeScript</span></td><td class="gh-stars">+239</td></tr>
-<tr><td>20</td><td><a href="https://github.com/commaai/openpilot">commaai/openpilot</a></td><td>开源自动驾驶辅助</td><td><span class="gh-lang">Python</span></td><td class="gh-stars">+322</td></tr>
-</table>
-</div>
+
+<div class="gh-item"><div class="rank">1</div><div class="info"><div class="name">google-labs-code/design.md</div><div class="desc">为AI编码Agent提供结构化视觉设计规范的持久化格式</div><a href="https://github.com/google-labs-code/design.md" target="_blank">GitHub →</a></div><div class="stars">+1,541⭐</div></div>
+
+<div class="gh-item"><div class="rank">2</div><div class="info"><div class="name">Panniantong/Agent-Reach</div><div class="desc">让AI Agent免API费读取搜索Twitter/Reddit/YouTube/GitHub</div><a href="https://github.com/Panniantong/Agent-Reach" target="_blank">GitHub →</a></div><div class="stars">+1,145⭐</div></div>
+
+<div class="gh-item"><div class="rank">3</div><div class="info"><div class="name">topoteretes/cognee</div><div class="desc">开源自托管AI记忆平台，为Agent提供持久化知识图谱</div><a href="https://github.com/topoteretes/cognee" target="_blank">GitHub →</a></div><div class="stars">+780⭐</div></div>
+
+<div class="gh-item"><div class="rank">4</div><div class="info"><div class="name">JCodesMore/ai-website-cloner-template</div><div class="desc">用AI编码Agent一条命令克隆任何网站</div><a href="https://github.com/JCodesMore/ai-website-cloner-template" target="_blank">GitHub →</a></div><div class="stars">+750⭐</div></div>
+
+<div class="gh-item"><div class="rank">5</div><div class="info"><div class="name">opendatalab/MinerU</div><div class="desc">将PDF/Office文档转换为LLM可用的Markdown或JSON</div><a href="https://github.com/opendatalab/MinerU" target="_blank">GitHub →</a></div><div class="stars">+749⭐</div></div>
+
+<div class="gh-item"><div class="rank">6</div><div class="info"><div class="name">xbtlin/ai-berkshire</div><div class="desc">基于Claude Code的价值投资多Agent对抗分析框架</div><a href="https://github.com/xbtlin/ai-berkshire" target="_blank">GitHub →</a></div><div class="stars">+685⭐</div></div>
+
+<div class="gh-item"><div class="rank">7</div><div class="info"><div class="name">garrytan/gstack</div><div class="desc">Garry Tan的Claude Code配置，含23个面向多角色的工具</div><a href="https://github.com/garrytan/gstack" target="_blank">GitHub →</a></div><div class="stars">+674⭐</div></div>
+
+<div class="gh-item"><div class="rank">8</div><div class="info"><div class="name">mauriceboe/TREK</div><div class="desc">自托管旅行规划器，实时协作/地图/预算/PWA</div><a href="https://github.com/mauriceboe/TREK" target="_blank">GitHub →</a></div><div class="stars">+610⭐</div></div>
+
+<div class="gh-item"><div class="rank">9</div><div class="info"><div class="name">hugohe3/ppt-master</div><div class="desc">AI从文档生成可编辑PowerPoint含动画和语音旁白</div><a href="https://github.com/hugohe3/ppt-master" target="_blank">GitHub →</a></div><div class="stars">+589⭐</div></div>
+
+<div class="gh-item"><div class="rank">10</div><div class="info"><div class="name">harry0703/MoneyPrinterTurbo</div><div class="desc">一键使用LLM生成短视频</div><a href="https://github.com/harry0703/MoneyPrinterTurbo" target="_blank">GitHub →</a></div><div class="stars">+427⭐</div></div>
+
+<div class="gh-item"><div class="rank">11</div><div class="info"><div class="name">NanmiCoder/MediaCrawler</div><div class="desc">爬取国内主流社交平台帖子和评论</div><a href="https://github.com/NanmiCoder/MediaCrawler" target="_blank">GitHub →</a></div><div class="stars">+394⭐</div></div>
+
+<div class="gh-item"><div class="rank">12</div><div class="info"><div class="name">anomalyco/opencode</div><div class="desc">为终端工作流构建的开源AI编码Agent</div><a href="https://github.com/anomalyco/opencode" target="_blank">GitHub →</a></div><div class="stars">+392⭐</div></div>
+
+<div class="gh-item"><div class="rank">13</div><div class="info"><div class="name">colbymchenry/codegraph</div><div class="desc">本地同步代码知识图谱，减少Agent token使用量</div><a href="https://github.com/colbymchenry/codegraph" target="_blank">GitHub →</a></div><div class="stars">+366⭐</div></div>
+
+<div class="gh-item"><div class="rank">14</div><div class="info"><div class="name">tashfeenahmed/freellmapi</div><div class="desc">聚合16家LLM免费层的OpenAI兼容代理</div><a href="https://github.com/tashfeenahmed/freellmapi" target="_blank">GitHub →</a></div><div class="stars">+354⭐</div></div>
+
+<div class="gh-item"><div class="rank">15</div><div class="info"><div class="name">commaai/openpilot</div><div class="desc">开源机器人OS，为300+车型升级驾驶辅助</div><a href="https://github.com/commaai/openpilot" target="_blank">GitHub →</a></div><div class="stars">+322⭐</div></div>
+
+<div class="gh-item"><div class="rank">16</div><div class="info"><div class="name">anthropics/skills</div><div class="desc">Anthropic公开的Agent技能仓库</div><a href="https://github.com/anthropics/skills" target="_blank">GitHub →</a></div><div class="stars">+322⭐</div></div>
+
+<div class="gh-item"><div class="rank">17</div><div class="info"><div class="name">every-app/open-seo</div><div class="desc">Semrush/Ahrefs开源替代，SEO分析工具</div><a href="https://github.com/every-app/open-seo" target="_blank">GitHub →</a></div><div class="stars">+239⭐</div></div>
+
+<div class="gh-item"><div class="rank">18</div><div class="info"><div class="name">browser-use/video-use</div><div class="desc">用AI编码Agent编辑视频</div><a href="https://github.com/browser-use/video-use" target="_blank">GitHub →</a></div><div class="stars">+186⭐</div></div>
 </div>
 
-<!-- 今日洞察 -->
+<!-- 💡 今日洞察 -->
 <div class="section" id="insights">
 <div class="section-title">💡 今日洞察</div>
 
 <div class="insight-card">
-<h3>洞察一：AI行业的"芯片自主化"浪潮正在改写竞争规则</h3>
-<p>OpenAI推出Jalapeño芯片、高通发布Dragonfly C1000、SK海力士赴美上市——今日最密集的信号指向同一个方向：AI行业正在从"买芯片"走向"造芯片"。当AI实验室的核心竞争力开始延伸到硅片设计层面，行业壁垒正发生质的跃升。未来的AI竞争将是"模型+芯片+系统"的全栈竞争。对于没有芯片自研能力的中小型AI公司，这可能是一个危险信号。</p>
+<h3>洞察一：算力主权正在成为比"模型能力"更重要的竞争维度</h3>
+<p>谷歌限制Meta、实施配额、三星建封装厂、韩国推AI电价——AI竞赛决胜点正从"谁的模型更强"转向"谁拥有更多算力"。当连谷歌自己都不够用时，"算力主权"已成企业战略核心。OpenAI率先自研芯片，正是前瞻性回应。未来12-18个月将看到更多自研芯片和专属数据中心投资。</p>
 </div>
 
 <div class="insight-card">
-<h3>洞察二：AI知识产权的"灰色地带"正在成为地缘政治新前线</h3>
-<p>Anthropic指控阿里巴巴蒸馏Claude的事件，暴露了一个根本性问题：当模型能力可通过API调用被"提取"时，AI公司核心资产如何保护？更深层的问题是这类争议正在被地缘政治化——"蒸馏"变成了"国家安全"叙事的一部分。如果趋势持续，AI领域可能出现类似核技术的严格出口管制和知识产权保护体系。</p>
+<h3>洞察二：AI编程赛道的"超级整合"已经开始</h3>
+<p>SpaceX 600亿收购Cursor、8090 Labs融资1.35亿、AI编程市场93亿、Claude Tag进Slack——AI编程工具正从分散的"效率工具"快速整合为企业级基础设施。收购与产品扩张同步推进，Anthropic嵌入Slack则是从"个人助手"到"团队基础设施"的关键转型。预计下半年还将出现更多大型并购。</p>
 </div>
 
 <div class="insight-card">
-<h3>洞察三：从"模型竞赛"到"生态竞赛"——竞争维度的范式转移</h3>
-<p>Anthropic的成功不仅在于模型性能，更在于Claude Code构建的企业级开发生态（25亿美元ARR）；苹果AFM 3的价值在于与iOS生态的深度整合；高通Dragonfly的战略意义在于拿下Meta和微软的数据中心入口。AI竞争正从"谁的模型更强"演变为"谁的生态更深"。对于开发者和企业用户，选择AI工具不再是简单的性能比较，而是生态绑定的战略决策。</p>
+<h3>洞察三：中国开源AI正从"追赶者"变成"定价者"</h3>
+<p>Coinbase切换国产模型成本减半、百度OCR 5天破万Star、DeepSeek永久降价、VibeThinker-3B打平600B——中国AI开源生态正从"追赶者"转变为"定价者"。通过极致参数效率和开源策略，中国团队正在重新定义全球价格基准。对西方前沿模型公司的定价压力将在未来几个季度变得更加明显。</p>
 </div>
+</div>
+
 </div>
 
 <div class="footer">
-<p>本简报由AI自动生成，信息基于公开搜索结果整理</p>
-<p>数据来源：BuildFastWithAI, Unrot, CNBC, 腾讯新闻, 36氪, ArXiv, GitHub Trending, 央广网, 新浪财经等</p>
-<p style="margin-top:8px"><a href="https://github.com/Polors/daily-ai-news" style="color:#999">GitHub 仓库</a></p>
+<p>本简报由AI基于多源公开信息自动汇编生成，仅供参考</p>
+<p>📅 2026年6月30日 | <a href="https://polors.github.io/daily-ai-news/" target="_blank">在线阅读</a></p>
 </div>
 
-</div>
 </body>
 </html>
